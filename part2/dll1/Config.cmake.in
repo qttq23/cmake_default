@@ -1,0 +1,21 @@
+@PACKAGE_INIT@
+
+# check dependencies
+include(CMakeFindDependencyMacro)
+
+if(@DLL1_PRINTER_ENABLED@)	
+	find_dependency(Printer 2.0.0 REQUIRED COMPONENTS Printer)
+	set(Dll1_Printer_FOUND ON)
+endif()
+
+find_dependency(Util 2.0.0 REQUIRED COMPONENTS Util)
+set(Dll1_Util_FOUND ON)
+
+# set variables
+set(Dll1_install_dir "@install_dir@")
+set(Dll1_cmake_dir "@cmake_dir@")
+set(Dll1_include_dir "@include_dir@")
+set(Dll1_runtime_dir "@runtime_dir@")
+
+
+check_required_components(Dll1)

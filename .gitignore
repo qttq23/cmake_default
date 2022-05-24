@@ -1,0 +1,10 @@
+
+
+# trash projects
+.vs/
+samples/
+
+build/
+build*/
+install/
+install*/
