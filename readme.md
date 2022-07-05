@@ -87,6 +87,10 @@ cmake --build . --target Lib3 --config Debug
 cmake --install lib3 --config Debug
 )
 
+## Note about install .dll dependencies:
+below applies for Windows:
+- you should first open the `VS developer command prompt` then run cmake commands on that. It will guarantee cmake will find the right tools to build and find dependecies.
+- to install dll dependencies, use the command `install(target RUNTIME_DEPENDENCIES DIRECTORIES dir1 dir2 ...)`. replace dir1,dir2 with the folders that contain dll dependencies. cmake will use VisualStudio's dumpbin to find dependencies in those folders and copy those to DESTINATION. 
 
 ## part 2: export, import, custom module file, include version parser
 
