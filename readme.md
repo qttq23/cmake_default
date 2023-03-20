@@ -1,3 +1,5 @@
+
+
 # cmake tutorial summary (version 3.23, Windows)
 
 ## part 1: basic structure, config, build, install
